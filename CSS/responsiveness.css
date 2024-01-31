@@ -1,0 +1,368 @@
+@media only screen and (min-width: 1367px) {
+    .library {
+        height: 78vh;
+    }
+}
+
+@media only screen and (max-width: 1365px) {
+    .library {
+        height: 78vh;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .playbar {
+        height: 11vh;
+    }
+
+    .playbar .box .songname,
+    .playbar .box .button,
+    .playbar .box .time {
+        padding-right: 0px;
+    }
+
+    .playbar .box {
+        display: block;
+    }
+
+    .playbar .box .box-2 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .playbar .box .volumeseekbar {
+        margin-top: 10px;
+    }
+
+    .playbar .seekbar {
+        width: 90%;
+        bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 1051px) {
+    .left {
+        width: 32vw;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .left {
+        position: absolute;
+        left: -130%;
+        transition: all .3s;
+        z-index: 5;
+        width: 400px;
+        background-color: black;
+        padding: 0;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+    }
+
+    .home .cross {
+        display: inline-block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .right {
+        transition: all .3s;
+        width: 100vw;
+    }
+
+    .playbar {
+        height: 11vh;
+    }
+
+    .playbar .box .volumeseekbar {
+        margin-top: 5px;
+    }
+
+    .playlist .cardcontainer {
+        max-height: 65vh;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .playbar {
+        height: 15vh;
+    }
+
+    .playbar .seekbar {
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 521px) {
+    .playlist .cardcontainer .card {
+        width: 350px;
+    }
+
+    .playlist .cardcontainer .card>img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .playlist .cardcontainer .card {
+        width: 300px;
+    }
+
+    .playlist .cardcontainer .card>img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .playlist .cardcontainer .card {
+        width: 250px;
+    }
+
+    .playlist .cardcontainer .card>img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .playlist .cardcontainer .card {
+        width: 200px;
+    }
+
+    .playlist .cardcontainer .card>img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .playbar {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    * {
+        font-size: 10px;
+    }
+
+    .left {
+        width: 373px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    * {
+        font-size: 10px;
+    }
+
+    .left {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    * {
+        font-size: 5px;
+    }
+
+    .left {
+        width: 260px;
+    }
+}
+
+@media (min-width: 1367px) and (max-height: 700px) {
+    .playbar {
+        height: 13vh;
+    }
+
+    .right {
+        height: 111vh;
+    }
+}
+
+@media (max-width: 1365px) and (max-height: 700px) {
+    .playbar {
+        height: 13vh;
+    }
+
+    .right {
+        height: 111vh;
+    }
+}
+
+@media (max-width: 1049px) and (max-height: 700px) {
+    .playbar {
+        height: 15vh;
+    }
+
+    .right {
+        height: 120vh;
+    }
+
+    .left {
+        position: absolute;
+    }
+}
+
+@media (max-width: 415px) and (max-height: 700px) {
+    .playbar {
+        height: 20vh;
+    }
+
+    .right {
+        height: 130vh;
+    }
+
+    .left {
+        position: absolute;
+    }
+}
+
+@media (max-width: 300px) and (max-height: 700px) {
+    .playbar {
+        height: 22vh;
+    }
+
+    .right {
+        height: 135vh;
+    }
+
+    .left {
+        position: absolute;
+    }
+}
+
+@media (width: 280px) and (height: 653px) {
+    .right-head {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .less {
+        margin-left: 5px;
+    }
+
+    .greater {
+        margin-left: 2px;
+    }
+
+    .btn {
+        gap: 2px;
+    }
+}
+
+@media only screen and (height: 720px) {
+    .playbar {
+        height: 15vh;
+    }
+
+    .left {
+        position: absolute;
+    }
+
+    .library {
+        height: 75vh;
+    }
+}
+
+@media (min-width: 1050px) and (max-height: 500px) {
+    .playbar {
+        height: 18vh;
+    }
+
+    .right {
+        height: 122vh;
+    }
+}
+
+@media (max-width: 1049px) and (max-height: 500px) {
+    .playbar {
+        height: 18vh;
+    }
+
+    .right {
+        height: 130vh;
+    }
+
+    .left {
+        position: absolute;
+    }
+
+    .library {
+        height: 90vh;
+    }
+}
+
+@media (max-width: 620px) and (max-height: 500px) {
+    .playbar {
+        height: 20vh;
+    }
+
+    .right {
+        height: 130vh;
+    }
+
+    .left {
+        position: absolute;
+    }
+
+    .library {
+        height: 90vh;
+    }
+}
+
+@media (max-width: 400px) and (max-height: 500px) {
+    .playbar {
+        height: 25vh;
+    }
+
+    .right {
+        height: 140vh;
+    }
+
+    .left {
+        position: absolute;
+    }
+
+    .library {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 300px) and (max-height: 500px) {
+    .playbar {
+        height: 30vh;
+    }
+
+    .right {
+        height: 150vh;
+    }
+
+    .left {
+        position: absolute;
+    }
+
+    .library {
+        height: 105vh;
+    }
+
+    .less {
+        margin-left: 5px;
+    }
+
+    .greater {
+        margin-left: 2px;
+    }
+
+    .btn {
+        gap: 2px;
+    }
+}
