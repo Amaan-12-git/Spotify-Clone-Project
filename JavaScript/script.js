@@ -3,7 +3,7 @@ let songs2 = [];
 let folder_array = [];
 let prev_volume;
 const displayAlbum = async () => {
-  let data = await fetch("http://127.0.0.1:5500/Albums");
+  let data = await fetch("https://amaan-12-git.github.io/Spotify-Clone-Project/Albums");
   let response = await data.text();
   let div = document.createElement("div");
   div.innerHTML = response;
