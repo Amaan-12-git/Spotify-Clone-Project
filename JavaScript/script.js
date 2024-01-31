@@ -3,7 +3,7 @@ let songs2 = [];
 let folder_array = [];
 let prev_volume;
 const displayAlbum = async () => {
-  let data = await fetch("https://amaan-12-git.github.io/Spotify-Clone-Project/Albums");
+  let data = await fetch("/Spotify-Clone-Project/Albums");
   let response = await data.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -16,14 +16,14 @@ const displayAlbum = async () => {
       let folder = e.href.split("/Albums/")[1];
       folder_array.push(folder);
       let json_file = await fetch(
-        `http://127.0.0.1:5500/Albums/${folder}/text.json`
+        `/Spotify-Clone-Project/Albums/${folder}/text.json`
       );
       let result_json = await json_file.json();
       let cardcontainer = document.querySelector(".cardcontainer");
       cardcontainer.innerHTML =
         cardcontainer.innerHTML +
         `<div class="card">
-        <img src="http://127.0.0.1:5500/Albums/${folder}/cover.jpg" alt="Cover" width="180" height="190">
+        <img src="/Spotify-Clone-Project/Albums/${folder}/cover.jpg" alt="Cover" width="180" height="190">
         <div class="play-icon">
             <img src="svgs/play.svg" alt="play">
         </div>
@@ -53,7 +53,7 @@ const displaysongs = async (e) => {
       break;
     }
   }
-  let songsUL = await fetch(`http://127.0.0.1:5500/Albums/${card_name}`);
+  let songsUL = await fetch(`/Spotify-Clone-Project/${card_name}`);
   let songs_text = await songsUL.text();
   let songs_div = document.createElement("div");
   songs_div.innerHTML = songs_text;
@@ -77,7 +77,7 @@ const displaysongs = async (e) => {
   }
   let songs = Array.from(document.getElementsByClassName("songs"));
   let song_ul =
-    `http://127.0.0.1:5500/Albums/${card_name}/` +
+    `/Spotify-Clone-Project/Albums/${card_name}/` +
     songs[0].getElementsByTagName("p")[0].innerHTML;
   currentSong.src = song_ul;
   document.querySelector(".songname").innerHTML = decodeURIComponent(songs[0].getElementsByTagName("p")[0].innerHTML);
@@ -85,7 +85,7 @@ const displaysongs = async (e) => {
   songs.forEach((e) => {
     e.addEventListener("click", async () => {
       song_ul =
-        `http://127.0.0.1:5500/Albums/${card_name}/` +
+        `/Spotify-Clone-Project/Albums/${card_name}/` +
         e.getElementsByTagName("p")[0].innerHTML;
       currentSong.src = song_ul;
       document.querySelector(".songname").innerHTML = decodeURIComponent(e.getElementsByTagName("p")[0].innerHTML);
@@ -118,7 +118,7 @@ const sec_to_min = (time)=>{
     return min+":"+sec; 
 }
 const display_folder =  async (card_name) =>{
-  let songsUL = await fetch(`http://127.0.0.1:5500/Albums/${card_name}`);
+  let songsUL = await fetch(`/Spotify-Clone-Project/Albums/${card_name}`);
   let songs_text = await songsUL.text();
   let songs_div = document.createElement("div");
   songs_div.innerHTML = songs_text;
@@ -142,7 +142,7 @@ const display_folder =  async (card_name) =>{
   }
   let songs = Array.from(document.getElementsByClassName("songs"));
   let song_ul =
-    `http://127.0.0.1:5500/Albums/${card_name}/` +
+    `/Spotify-Clone-Project/Albums/${card_name}/` +
     songs[0].getElementsByTagName("p")[0].innerHTML;
   currentSong.src = song_ul;
   document.querySelector(".songname").innerHTML = decodeURIComponent(songs[0].getElementsByTagName("p")[0].innerHTML);
@@ -150,7 +150,7 @@ const display_folder =  async (card_name) =>{
   songs.forEach((e) => {
     e.addEventListener("click", async () => {
       song_ul =
-        `http://127.0.0.1:5500/Albums/${card_name}/` +
+        `/Spotify-Clone-Project/Albums/${card_name}/` +
         e.getElementsByTagName("p")[0].innerHTML;
       currentSong.src = song_ul;
       document.querySelector(".songname").innerHTML = decodeURIComponent(e.getElementsByTagName("p")[0].innerHTML);
