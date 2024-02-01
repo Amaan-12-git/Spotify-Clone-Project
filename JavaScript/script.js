@@ -159,7 +159,8 @@ const display_folder =  async (card_name) =>{
   });
 }
 const main = async () => {
-  displayAlbum();
+  await displayAlbum();
+  console.log(folder_array)
   document.querySelector(".button").getElementsByTagName("img")[1].addEventListener("click", () => {
       if (currentSong.paused) playAudio();
       else playAudio(true);
