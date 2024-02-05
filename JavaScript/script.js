@@ -169,7 +169,22 @@ const main = async () => {
         document.querySelector(".time").innerHTML = `${sec_to_min(currentSong.currentTime)}/${sec_to_min(currentSong.duration)}`;
         if(currentSong.currentTime == currentSong.duration)
         {
-          playAudio(true);
+          // playAudio(true);
+          let index = songs2.indexOf(currentSong.src.split("/").slice(-1)[0]);
+        if(index+1<songs2.length)
+        {
+            currentSong.src = currentSong.src.replace(songs2[index],songs2[index+1]);
+            document.querySelector(".songname").innerHTML = decodeURIComponent(songs2[index+1]);
+            playAudio();
+        }
+        else
+        {
+          let folder_index = folder_array.indexOf(currentSong.src.split("/").slice(-2)[0]);
+          if(folder_index+1<folder_array.length){
+          let folder_name = folder_array[folder_index+1];
+          display_folder(folder_name);
+          }
+        }
         }
         document.getElementsByClassName("circle")[0].style.left = (currentSong.currentTime/currentSong.duration)*100+ "%";
     })
