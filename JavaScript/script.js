@@ -5,7 +5,7 @@ let prev_volume;
 const displayAlbum = async () => {
   let data = await fetch("http://127.0.0.1:5500/Albums");
   let response = await data.text();
-  let div = document.createElement("div");
+  let div = document.createElement("div"); 
   div.innerHTML = response;
   let anchors = div.getElementsByTagName("a");
   anchors = Array.from(anchors);
